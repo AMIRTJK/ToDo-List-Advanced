@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400;500;600;700;800;900&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Open+Sans&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400;500;700;900&family=Rubik:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+input {
+  outline: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+i {
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1250px;
+  padding: 0 15px;
+  position: relative;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: start;
+  margin-top: 40px;
+  padding-bottom: 100px;
+}
+
+ul.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+ul.nav > input {
+  border: none;
+  background-color: rgb(225, 233, 242);
+  padding: 10px;
+  border-radius: 3px;
+  width: 230px;
+  font-size: 14px;
+}
+
+ul.nav > input::placeholder {
+  color: rgb(122, 122, 122);
+  font-weight: 500;
+}
+
+.content {
+  margin-left: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 120px;
+  column-gap: 20px;
+}
+
+.content .post {
+  width: 300px;
+  height: 170px;
+  border-radius: 10px;
+  transition: 0.3s all;
+  z-index: 3;
+  position: relative;
+}
+
+.sold {
+  position: absolute;
+  top: 45%;
+  z-index: 4;
+  color: #fff;
+  background-color: #000000ca;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+.content .post:hover {
+  transform: scale(1.01);
+}
+
+h1.null-post {
+  margin-left: 300px;
+  margin-top: 100px;
+  display: none;
+}
+
+.wrapper-image img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.control-panel {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.control-panel .wrapper-icon-left,
+.control-panel .wrapper-icon-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+i.delete {
+  color: red;
+}
+
+.control-panel .wrapper-text {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  row-gap: 10px;
+}
+.wrapper-text p {
+  font-size: 12px;
+  color: rgb(156, 156, 156);
+  font-weight: 500;
+}
+
+.wrapper-text p + p {
+  color: #000;
+  font-weight: 600;
+}
+
+input[type="checkbox"] {
+  width: 50px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
+  width: 22px;
+  height: 22px;
+  border-radius: 11px;
+  cursor: pointer;
+}
+
+.info p {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Открыть модальное окно */
+
+.modal-right {
+  display: flex;
+  justify-content: end;
+  margin-top: 50px;
+}
+
+.wrapper-btn-modal {
+  border: 1px solid #00000039;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.1s all;
+}
+
+.wrapper-btn-modal:hover {
+  background-color: #f8f8f8;
+}
+
+.wrapper-btn-modal span.btn-show-modal {
+  font-size: 40px;
+  font-weight: 400;
+  color: #000000b3;
+}
+
+/* Модальное окно - Добавить пост */
+
+.modal,
+.modal-edit {
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 400px;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  background-color: #fffffff0;
+  box-shadow: 0 0 4px #000;
+  display: none;
+  z-index: 5;
+}
+
+.modal > .modal-content,
+.modal-edit .modal-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Модалка инфо */
+
+.modal-info {
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 400px;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  background-color: #fffffff0;
+  box-shadow: 0 0 4px #000;
+  display: none;
+  z-index: 5;
+}
+
+.modal-info .modal-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  gap: 10px;
+}
+
+.img-info {
+  width: 50%;
+  border-radius: 10px;
+}
+
+.image-list {
+  width: 80%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border-radius: 10px;
+}
+.image-list img {
+  width: 20%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.1s all;
+}
+
+.image-list img:hover {
+  opacity: 0.5;
+}
+
+.modal-content input {
+  width: 80%;
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.modal-content span.close,
+span.close-edit,
+.close-info {
+  position: absolute;
+  top: 0;
+  right: 2%;
+  font-size: 35px;
+  cursor: pointer;
+  transition: 0.1s all;
+}
+
+.modal-content span.close:hover,
+.modal-content span.close-edit:hover,
+.modal-content span.close-info:hover {
+  color: rgb(222, 0, 0);
+}
+
+.wrapper-btn-edit {
+  display: flex;
+  gap: 10px;
+}
+
+button.btn-add,
+.save {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.1s all;
+}
+button.btn-add:hover {
+  background-color: rgb(1, 150, 1);
+  color: #fff;
+  border: none;
+}
+
+button.save:hover {
+  background-color: rgb(1, 83, 150);
+  color: #fff;
+  border: none;
+}
+
+button.save:active {
+  background-color: rgb(0, 61, 111);
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Продвинутый ToDo List</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/css/all.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="modal-right">
+        <div class="wrapper-btn-modal">
+          <span class="btn-show-modal">+</span>
+        </div>
+      </aside>
+      <!-- Модалка для добавления -->
+      <div class="modal">
+        <div class="modal-content">
+          <h2>Выберите фото</h2>
+          <div class="image-list">
+            <img src="./img/post-1.jpg" class="img-list" />
+            <img src="./img/post-2.jpg" class="img-list" />
+            <img src="./img/post-3.jpg" class="img-list" />
+            <img src="./img/post-4.png" class="img-list" />
+          </div>
+          <input type="text" placeholder="Описание поста" class="inp-desc" />
+          <input type="number" placeholder="Цена" class="inp-price" />
+          <input
+            type="text"
+            placeholder="Введите ссылку фото"
+            class="inp-image"
+          />
+          <button class="btn-add">Добавить</button>
+          <span class="close">&times;</span>
+        </div>
+      </div>
+      <!-- Модалка для изменения -->
+      <div class="modal-edit">
+        <div class="modal-content">
+          <input
+            type="text"
+            placeholder="Описание поста"
+            class="inp-desc-edit"
+          />
+          <input type="text" placeholder="Цена" class="inp-price-edit" />
+          <input
+            type="text"
+            placeholder="Введите ссылку фото"
+            class="inp-image-edit"
+          />
+          <div class="wrapper-btn-edit">
+            <button class="save">Сохранить</button>
+          </div>
+          <span class="close-edit">&times;</span>
+        </div>
+      </div>
+      <!-- Модальное окно Инфо -->
+      <div class="modal-info">
+        <div class="modal-content">
+          <img src="" class="img-info" />
+          <p class="title-info"></p>
+          <p class="price-info"></p>
+          <span class="close-info">&times;</span>
+        </div>
+      </div>
+      <div class="wrapper">
+        <aside class="left">
+          <ul class="nav">
+            <input type="text" placeholder="search..." />
+            <li><a href="#">Company</a></li>
+            <li><a href="#">All</a></li>
+            <li><a href="#">Ikea</a></li>
+            <li><a href="#">Marcos</a></li>
+            <li><a href="#">Caressa</a></li>
+            <li><a href="#">Liddy</a></li>
+          </ul>
+        </aside>
+        <h1 class="null-post">Добавьте посты</h1>
+        <div class="content">
+          <!-- Все элементы созданы через JavaSctipt -->
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
